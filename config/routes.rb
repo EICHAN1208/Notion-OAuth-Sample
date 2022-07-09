@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'home#index'
   get '/authorize' => 'auth#get_token'
-  get '/redirects' => 'redirects#index'
 end
