@@ -28,7 +28,7 @@ module AuthHelper
     client.auth_code.authorize_url(
       # 認可コード取得後のリダイレクト先
       # notion public integration のリダイレクトURIと揃える必要あり
-      redirect_uri: 'https://www.yahoo.co.jp/',
+      redirect_uri: 'http://localhost:3000/authorize',
       state: STATE,
       owner: 'user'
     )
@@ -47,7 +47,7 @@ module AuthHelper
     client.auth_code.get_token(
       auth_code,
       # notion public integration のリダイレクトURIと揃える必要あり
-      redirect_uri: 'https://www.yahoo.co.jp/'
+      redirect_uri: 'http://localhost:3000/authorize'
     )
   end
 
